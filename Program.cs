@@ -6,11 +6,11 @@
 Console.WriteLine("Введите длину массива");
 int N = Convert.ToInt32(Console.ReadLine());
 string[] array = new string[N];
-
+int a = 0;
 
 VvodArray(array);  //ввести/изменить
 PrintArray(array); //вывод
-OtbArray(array)
+
 
 void VvodArray(string[] array)
 {
@@ -18,6 +18,12 @@ void VvodArray(string[] array)
     {
         Console.WriteLine("Введите {0}-й элемент", i + 1);
         array[i] = Convert.ToString(Console.ReadLine());
+
+        if (array[i].Length <= 3)
+        {
+            array[a] = array[i];
+            a++;
+        }
     }
 }
 
@@ -29,14 +35,10 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
-void OtbArray(string[] array)
-{
-    for (int i = 0; i < array.length; i++)
-    {
-        if (i > ($"{array[i]}"))
-        Console.Write($"{array[i]} ");
-    }
-}
+
+
+
+
 
 
 
